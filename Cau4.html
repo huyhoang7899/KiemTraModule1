@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="rectangle" width="1368px" height="768px" style="border: 1px solid green"></canvas>
+<script>
+    let Rectangle = function (x, y, width, height, color) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.color = color;
+
+        this.render = function (canvas) {
+            canvas.fillStyle = this.color;
+            canvas.fillRect(this.x, this.y, this.height, this.width);
+
+        }
+    };
+    let rectangle1 = new Rectangle(10, 10, 100, 200, "#000000");
+    let canvas = document.getElementById("rectangle").getContext('2d');
+    rectangle1.render(canvas);
+</script>
+</body>
+</html>

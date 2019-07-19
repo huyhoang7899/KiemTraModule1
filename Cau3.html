@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function printFibonacci(input) {
+        let number1 = 0;
+        let number2 = 1;
+        let temp = 0;
+        let arr = [];
+        while (number1 + number2 < input) {
+            temp = number1;
+            number1 = number2;
+            number2 += temp;
+            arr.push(number2);
+        }
+        return arr;
+    }
+    let numBer = prompt("Nhập váo số nguyên n :  ");
+    let result = printFibonacci(numBer);
+    console.log(result);
+</script>
+</body>
+</html>

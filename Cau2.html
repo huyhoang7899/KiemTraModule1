@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = [12, 6, 3, 7, 21, 5, 7];
+    let number = parseInt(prompt("Nhập phần tử muốn xóa : "));
+    let  result = tryRemoveFromArray(arr1, number);
+    function tryRemoveFromArray(arr, num) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === num) {
+                arr.splice(i, 1);
+            }
+        }
+        return arr
+    }
+    console.log(result);
+</script>
+</body>
+</html>
